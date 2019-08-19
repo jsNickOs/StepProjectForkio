@@ -1,0 +1,16 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_breakpoints.scss";
+@import "_nikolay partial.scss";
+@import "_loras partial.scss";
+@import "_ihors partial.scss";
+
+@media (min-width: 1201px) {
+  body {
+    display: flex;
+    justify-content: center;
+    .wrapper {
+      width: 1200px;
+    }
+  }
+}

@@ -1,0 +1,763 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+//TOP HEADER - MOBILE
+@media (max-width: 480px) {
+  .header-wrapper {
+    position: relative;
+    min-width: 320px;
+    height: 718px;
+    background: url("../img/header-320.png")no-repeat;
+    background-size: 100%;
+    .nav-bar {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 103px;
+      width: 100%;
+      background-color: $grey;
+      &__logo {
+        position: absolute;
+        background: url("../img/navbar-logo.png");
+        width: 43px;
+        height: 41px;
+        left: 16px;
+      }
+      &__button-buy {
+        color: $white;
+        background-color: $purple;
+        border: 1px solid $purple;
+        border-radius: 20px;
+        width: 119px;
+        height: 37px;
+        cursor: pointer;
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          font-family: $mainFont;
+          font-weight: bold;
+          font-size: 15px;
+        }
+        &:hover {
+          background-color: $white;
+          color: $purple;
+        }
+      }
+      &__button-menu {
+        position: absolute;
+        cursor: pointer;
+        right: 15px;
+        width: 26px;
+        height: 21px;
+        &--active {
+          z-index: 2;
+          position: absolute;
+          cursor: pointer;
+          right: 15px;
+          background: url("../img/burger-menu-icon.png");
+          width: 100%;
+          height: 100%;
+        }
+        &--inactive {
+          z-index: 3;
+          position: absolute;
+          cursor: pointer;
+          right: 15px;
+          background: url("../img/burger-menu-icon.png");
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &__drop-down-menu--inactive {
+        display: none;
+      }
+      &__drop-down-menu--active {
+        position: absolute;
+        top: 103px;
+        min-width: 290px;
+        background-color: $normalGray;
+        div {
+          display: flex;
+          align-items: center;
+          position: relative;
+          height: 87px;
+          border-bottom: 1px solid $lightGray;
+          span {
+            margin-left: 32px;
+            color: $white;
+            font-family: $mainFont;
+            font-size: 19px;
+          }
+          &:hover {
+            span {
+              color: $purple;
+            }
+            .nav-bar__drop-down-menu--active-item {
+              position: absolute;
+              left: 0;
+              height: 53px;
+              width: 8px;
+              background-color: $purple;
+            }
+          }
+        }
+      }
+    }
+    .title {
+      &__name {
+        display: flex;
+        justify-content: center;
+        color: $white;
+        font-family: $mainFont;
+        font-weight: bold;
+        font-size: 35px;
+        padding-top: 43px;
+      }
+      &__description {
+        color: $purple;
+        font-family: $mainFont;
+        font-size: 13px;
+        padding-top: 20px;
+        padding-left: 32px;
+        padding-right: 30px;
+        &--first-line {
+          text-align: center;
+        }
+        &--second-line {
+          padding-top: 10px;
+          text-align: center;
+        }
+      }
+      &__addition {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        color: $lightGray;
+        font-family: $mainFont;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+    }
+    .bottom {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      &__download-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 290px;
+        height: 45px;
+        background-color: $purple;
+        border: 1px solid $purple;
+        border-radius: 20px;
+        cursor: pointer;
+        position: absolute;
+        bottom: -23px;
+        color: $white;
+        font-family: $mainFont;
+        font-size: 13px;
+        font-weight: bold;
+        &:hover{
+          background-color: $white;
+          color: $purple;
+        }
+      }
+      &__description{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: -46px;
+        color: $lightGray;
+        font-family: $mainFont;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+//TOP HEADER - TABLET
+@media (min-width: 481px) and (max-width: 992px) {
+  .header-wrapper {
+    position: relative;
+    min-width: 768px;
+    height: 872px;
+    background: url("../img/header-768.png") no-repeat;
+    background-size: 100%;
+    .nav-bar {
+      position: relative;
+      height: 118px;
+      width: 100%;
+      background-color: $grey;
+      &__logo {
+        position: absolute;
+        background: url("../img/navbar-logo-768.png");
+        width: 43px;
+        height: 41px;
+        left: 20px;
+        top: 22px;
+        &::after{
+          content: "ForkIO";
+          text-transform: uppercase;
+          color: $purple;
+          position: absolute;
+          top: 9px;
+          left: 57px;
+          font-family: $descrFont;
+          font-size: 24px;
+          font-weight: bold;
+        }
+      }
+      &__button-buy {
+        position: absolute;
+        right: 20px;
+        top: 24px;
+        color: $white;
+        background-color: $purple;
+        border: 1px solid $purple;
+        border-radius: 20px;
+        width: 145px;
+        height: 38px;
+        cursor: pointer;
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          font-family: $mainFont;
+          font-weight: bold;
+          font-size: 16px;
+        }
+        &:hover {
+          background-color: $white;
+          color: $purple;
+        }
+      }
+      &__button-menu {
+        display: none;
+      }
+      &__drop-down-menu--inactive {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 22px;
+        width: 100%;
+        div {
+          cursor: pointer;
+          margin-right: 48px;
+          &:last-child{
+            margin-right: 0;
+          }
+          span {
+            font-family: $mainFont;
+            font-weight: bold;
+            font-size: 16px;
+            color: $purple;
+          }
+          &:hover {
+            span {
+              color: $white;
+            }
+            .nav-bar__drop-down-menu--active-item {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .title {
+      &__name {
+        display: flex;
+        justify-content: center;
+        color: $white;
+        font-family: $mainFont;
+        font-weight: bold;
+        font-size: 52px;
+        padding-top: 50px;
+      }
+      &__description {
+        display: flex;
+        justify-content: center;
+        color: $purple;
+        font-family: $mainFont;
+        font-size: 17px;
+        padding-top: 26px;
+        &--second-line {
+          padding-left: 5px;
+        }
+      }
+      &__addition {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        color: $lightGray;
+        font-family: $mainFont;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+    }
+    .bottom {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      &__download-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 390px;
+        height: 63px;
+        background-color: $purple;
+        border: 1px solid $purple;
+        border-radius: 30px;
+        cursor: pointer;
+        position: absolute;
+        bottom: -32px;
+        color: $white;
+        font-family: $mainFont;
+        font-size: 18px;
+        font-weight: bold;
+        &:hover{
+          background-color: $white;
+          color: $purple;
+        }
+      }
+      &__description{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: -65px;
+        color: $lightGray;
+        font-family: $mainFont;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+//TOP HEADER - DESKTOP
+@media (min-width: 993px) {
+  .header-wrapper {
+    position: relative;
+    width: 1200px;
+    height: 950px;
+    background: url("../img/header-1200.png") center;
+    .nav-bar {
+      position: relative;
+      height: 100px;
+      width: 100%;
+      background-color: $grey;
+      &__logo {
+        position: absolute;
+        background: url("../img/navbar-logo-768.png");
+        width: 43px;
+        height: 41px;
+        left: 90px;
+        top: 29px;
+        &::after{
+          content: "ForkIO";
+          text-transform: uppercase;
+          color: $purple;
+          position: absolute;
+          top: 9px;
+          left: 57px;
+          font-family: $descrFont;
+          font-size: 24px;
+          font-weight: bold;
+        }
+      }
+      &__button-buy {
+        z-index: 999;
+        position: absolute;
+        right: 90px;
+        top: 31px;
+        color: $white;
+        background-color: $purple;
+        border: 1px solid $purple;
+        border-radius: 20px;
+        width: 145px;
+        height: 38px;
+        cursor: pointer;
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          font-family: $mainFont;
+          font-weight: bold;
+          font-size: 16px;
+        }
+        &:hover {
+          background-color: $white;
+          color: $purple;
+        }
+      }
+      &__button-menu {
+        display: none;
+      }
+      &__drop-down-menu--inactive {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 43px;
+        width: 100%;
+        div {
+          cursor: pointer;
+          margin-right: 48px;
+          &:last-child{
+            margin-right: 0;
+          }
+          span {
+            font-family: $mainFont;
+            font-weight: bold;
+            font-size: 16px;
+            color: $purple;
+          }
+          &:hover {
+            span {
+              color: $white;
+            }
+            .nav-bar__drop-down-menu--active-item {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .title {
+      &__name {
+        display: flex;
+        justify-content: center;
+        color: $white;
+        font-family: $mainFont;
+        font-weight: bold;
+        font-size: 60px;
+        padding-top: 60px;
+      }
+      &__description {
+        display: flex;
+        justify-content: center;
+        color: $purple;
+        font-family: $mainFont;
+        font-size: 22px;
+        padding-top: 18px;
+        &--second-line {
+          padding-left: 5px;
+        }
+      }
+      &__addition {
+        display: flex;
+        justify-content: center;
+        padding-top: 18px;
+        color: $lightGray;
+        font-family: $mainFont;
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+    }
+    .bottom {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      &__download-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 390px;
+        height: 63px;
+        background-color: $purple;
+        border: 1px solid $purple;
+        border-radius: 30px;
+        cursor: pointer;
+        position: absolute;
+        bottom: -32px;
+        color: $white;
+        font-family: $mainFont;
+        font-size: 18px;
+        font-weight: bold;
+        &:hover{
+          background-color: $white;
+          color: $purple;
+        }
+      }
+      &__description{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: -65px;
+        color: $lightGray;
+        font-family: $mainFont;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+//PEOPLE ARE TALKING ABOUT FORK - MOBILE
+@media (max-width: 480px) {
+  .wrapper-testimonials {
+    position: relative;
+    min-width: 320px;
+    height: 1545px;
+    background: url("../img/testmonials-bg-320.png") no-repeat;
+    background-size: 100%;
+    &__title {
+      text-align: center;
+      padding-left: 35px;
+      padding-right: 35px;
+      padding-top: 61px;
+      color: $white;
+      font-family: $mainFont;
+      font-size: 26px;
+      font-weight: bold;
+    }
+    &__blocks {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      .block {
+        padding-top: 45px;
+        width: 245px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &__logo {
+          text-align: center;
+          &.logo1 {
+            background: url("../img/testmonials-logo1-320.png");
+            width: 165px;
+            height: 43px;
+          }
+          &.logo2 {
+            background: url("../img/testmonials-logo2-320.png");
+            width: 148px;
+            height: 50px;
+          }
+          &.logo3 {
+            background: url("../img/testmonials-logo3-320.png");
+            width: 64px;
+            height: 64px;
+          }
+          &.logo4 {
+            background: url("../img/testmonials-logo4-320.png");
+            width: 225px;
+            height: 24px;
+          }
+          &.logo5 {
+            background: url("../img/testmonials-logo5-320.png");
+            width: 166px;
+            height: 34px;
+          }
+          &.logo6 {
+            background: url("../img/testmonials-logo6-320.png");
+            width: 108px;
+            height: 34px;
+          }
+        }
+        &__testimonial{
+          padding-top: 37px;
+          font-family: $mainFont;
+          font-style: italic;
+          font-size: 16px;
+          color: $white;
+        }
+      }
+    }
+    &__hr{
+      padding-top: 44px;
+      &--active-768{
+        display: none;
+      }
+      &--active-1200{
+        display: none;
+      }
+    }
+  }
+}
+
+//PEOPLE ARE TALKING ABOUT FORK - TABLET
+@media (min-width: 481px) and (max-width: 992px) {
+  .wrapper-testimonials {
+    position: relative;
+    min-width: 768px;
+    height: 894px;
+    background: url("../img/testmonials-bg-768.png") no-repeat;
+    background-size: 100%;
+    &__title {
+      text-align: center;
+      padding-left: 49px;
+      padding-right: 49px;
+      padding-top: 79px;
+      color: $white;
+      font-family: $mainFont;
+      font-size: 31px;
+      font-weight: bold;
+    }
+    &__blocks {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      .block {
+        padding-top: 45px;
+        padding-right: 30px;
+        padding-left: 30px;
+        width: 306px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &__logo {
+          text-align: center;
+          &.logo1 {
+            background: url("../img/testmonials-logo1-320.png") no-repeat;
+            width: 165px;
+            height: 64px;
+          }
+          &.logo2 {
+            background: url("../img/testmonials-logo2-320.png") no-repeat;
+            width: 148px;
+            height: 64px;
+          }
+          &.logo3 {
+            background: url("../img/testmonials-logo3-320.png") no-repeat;
+            width: 64px;
+            height: 64px;
+          }
+          &.logo4 {
+            background: url("../img/testmonials-logo4-320.png") no-repeat;
+            width: 225px;
+            height: 64px;
+          }
+          &.logo5 {
+            background: url("../img/testmonials-logo5-320.png") no-repeat;
+            width: 166px;
+            height: 64px;
+          }
+          &.logo6 {
+            background: url("../img/testmonials-logo6-320.png") no-repeat;
+            width: 108px;
+            height: 64px;
+          }
+        }
+        &__testimonial {
+          padding-top: 37px;
+          font-family: $mainFont;
+          font-style: italic;
+          font-size: 16px;
+          color: $white;
+        }
+      }
+    }
+    &__hr--active-768 {
+      div{
+        text-align: center;
+        padding-left: 51px;
+        padding-right: 43px;
+        padding-top: 61px;
+        color: $lightGray;
+        font-family: $mainFont;
+        font-size: 14px;
+      }
+    }
+    &__hr--active-320 {
+      display: none;
+    }
+    &__hr--active-1200 {
+      display: none;
+    }
+  }
+}
+
+//PEOPLE ARE TALKING ABOUT FORK - DESKTOP
+@media (min-width: 993px) {
+  .wrapper-testimonials {
+    position: relative;
+    width: 1200px;
+    height: 769px;
+    background: url("../img/testmonials-bg-1200.png") no-repeat;
+    background-size: 100%;
+    &__title {
+      text-align: center;
+      padding: 98px 306px 40px 308px;
+      color: $white;
+      font-family: $mainFont;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    &__blocks {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      .block {
+        padding-top: 50px;
+        padding-right: 30px;
+        padding-left: 30px;
+        width: 306px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &__logo {
+          text-align: center;
+          &.logo1 {
+            background: url("../img/testmonials-logo1-320.png") no-repeat;
+            width: 165px;
+            height: 64px;
+          }
+          &.logo2 {
+            background: url("../img/testmonials-logo2-320.png") no-repeat;
+            width: 148px;
+            height: 64px;
+          }
+          &.logo3 {
+            background: url("../img/testmonials-logo3-320.png") no-repeat;
+            width: 64px;
+            height: 64px;
+          }
+          &.logo4 {
+            background: url("../img/testmonials-logo4-320.png") no-repeat;
+            width: 225px;
+            height: 64px;
+          }
+          &.logo5 {
+            background: url("../img/testmonials-logo5-320.png") no-repeat;
+            width: 166px;
+            height: 64px;
+          }
+          &.logo6 {
+            background: url("../img/testmonials-logo6-320.png") no-repeat;
+            width: 108px;
+            height: 64px;
+          }
+        }
+        &__testimonial {
+          //padding-top: -10px;
+          font-family: $mainFont;
+          font-style: italic;
+          font-size: 16px;
+          color: $white;
+        }
+      }
+    }
+    &__hr--active-1200 {
+      div{
+        text-align: center;
+        padding-left: 140px;
+        padding-right: 140px;
+        padding-top: 61px;
+        color: $lightGray;
+        font-family: $mainFont;
+        font-size: 14px;
+      }
+    }
+    &__hr--active-320 {
+      display: none;
+    }
+    &__hr--active-768 {
+      display: none;
+    }
+  }
+}

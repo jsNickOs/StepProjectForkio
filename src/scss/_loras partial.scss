@@ -1,0 +1,245 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+//Revolutionary editor - MOBILE
+@media (max-width: 480px) {
+
+  .wrapper {
+    min-width: 320px;
+    .revolutionary-editor {
+      @include flexColumn;
+      @include asidePadding;
+      padding-top: 94px;
+      align-items: center;
+      background: #ffffff;
+
+      &__header {
+        font-size: 30.81257px;
+        color: rgba(99, 92, 115, 255);
+        text-align: center;
+        font-family: $mainFont;
+
+        &--transposition {
+          display: block;
+        }
+      }
+
+      &__paragraph {
+        font-size: 14px;
+        line-height: 20px;
+        color: #323232;
+        font-family: sans-serif;
+        text-align: center;
+        padding-top: 23px;
+        padding-bottom: 34px;
+
+      }
+
+      .actions {
+        @include flexRow;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+
+        &__watchBtn, &__starBtn, &__forkBtn {
+          height: 26px;
+          border: 1px solid #d5d5d5;
+          border-radius: 2px;
+          font-size: 11px;
+          font-weight: bolder;
+          color: #323232;
+          @include flexRow;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+
+          .watchIcon, .starIcon, .forkIcon {
+            @include flexRow;
+            background-color: #F1F1F1;
+            align-items: center;
+            height: 100%;
+            border-right: 1px solid #d5d5d5;
+            padding-right: 10px;
+            padding-left: 10px;
+            svg {
+              padding-right: 4px;
+            }
+          }
+
+          .watchAmount, .starAmount, .forkAmount {
+            padding: 6px;
+          }
+
+        }
+        &__forkBtn {
+          margin-left: 20%;
+          margin-right: 20%;
+          margin-top: 12px;
+          margin-bottom: 88px;
+        }
+      }
+    }
+  }
+}
+
+//Revolutionary editor - TABLET
+@media (min-width: 481px) and (max-width: 992px) {
+
+  .wrapper {
+    min-width: 768px;
+    .revolutionary-editor {
+      @include flexColumn;
+      @include asidePadding;
+      padding-top: 94px;
+      align-items: center;
+      background: #ffffff;
+
+      &__header {
+        font-size: 30.81257px;
+        color: rgba(99, 92, 115, 255);
+        text-align: center;
+        font-family: $mainFont;
+
+        &--transposition {
+          display: block;
+        }
+      }
+
+      &__paragraph {
+        font-size: 14px;
+        line-height: 20px;
+        color: #323232;
+        font-family: sans-serif;
+        text-align: center;
+        padding-top: 23px;
+        padding-bottom: 34px;
+
+      }
+
+      .actions {
+        @include flexRow;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+
+        &__watchBtn, &__starBtn, &__forkBtn {
+          height: 26px;
+          border: 1px solid #d5d5d5;
+          border-radius: 2px;
+          font-size: 11px;
+          font-weight: bolder;
+          color: #323232;
+          @include flexRow;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+
+          .watchIcon, .starIcon, .forkIcon {
+            @include flexRow;
+            background-color: #F1F1F1;
+            align-items: center;
+            height: 100%;
+            border-right: 1px solid #d5d5d5;
+            padding-right: 10px;
+            padding-left: 10px;
+            svg {
+              padding-right: 4px;
+            }
+          }
+
+          .watchAmount, .starAmount, .forkAmount {
+            padding: 6px;
+          }
+
+        }
+        &__forkBtn {
+          margin-left: 20%;
+          margin-right: 20%;
+          margin-top: 12px;
+          margin-bottom: 88px;
+        }
+      }
+    }
+  }
+}
+
+//Revolutionary editor - DESKTOP
+@media (min-width: 993px) {
+
+  .wrapper {
+    min-width: 1200px;
+    .revolutionary-editor {
+      @include flexColumn;
+      @include asidePadding;
+      padding-top: 94px;
+      align-items: center;
+      background: #ffffff;
+
+      &__header {
+        font-size: 30.81257px;
+        color: rgba(99, 92, 115, 255);
+        text-align: center;
+        font-family: $mainFont;
+
+        &--transposition {
+          display: block;
+        }
+      }
+
+      &__paragraph {
+        font-size: 14px;
+        line-height: 20px;
+        color: #323232;
+        font-family: sans-serif;
+        text-align: center;
+        padding-top: 23px;
+        padding-bottom: 34px;
+
+      }
+
+      .actions {
+        @include flexRow;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+
+        &__watchBtn, &__starBtn, &__forkBtn {
+          height: 26px;
+          border: 1px solid #d5d5d5;
+          border-radius: 2px;
+          font-size: 11px;
+          font-weight: bolder;
+          color: #323232;
+          @include flexRow;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+
+          .watchIcon, .starIcon, .forkIcon {
+            @include flexRow;
+            background-color: #F1F1F1;
+            align-items: center;
+            height: 100%;
+            border-right: 1px solid #d5d5d5;
+            padding-right: 10px;
+            padding-left: 10px;
+            svg {
+              padding-right: 4px;
+            }
+          }
+
+          .watchAmount, .starAmount, .forkAmount {
+            padding: 6px;
+          }
+
+        }
+        &__forkBtn {
+          margin-left: 20%;
+          margin-right: 20%;
+          margin-top: 12px;
+          margin-bottom: 88px;
+        }
+      }
+    }
+  }
+}

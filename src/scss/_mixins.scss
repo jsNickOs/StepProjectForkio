@@ -1,0 +1,41 @@
+/*Centralizing positions*/
+
+@mixin marginAuto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*flex mixin*/
+
+@mixin flexBox ($property) {
+  display: flex;
+  flex-direction: $property;
+  align-items: center;
+  justify-content: center;
+}
+
+/*font mixin*/
+
+@mixin fontSize ($font, $color, $size, $weight) {
+  font-family: $font;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+/*other mixin*/
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+
+}
+@mixin flexColumn{
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin asidePadding{
+  padding-left: 10px;
+  padding-right: 10px;
+}
