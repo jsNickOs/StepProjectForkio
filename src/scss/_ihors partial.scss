@@ -16,6 +16,12 @@ html, body {
 .grey-wrapper {
   background-color: #f4f4f4;
   @include flexBox(column);
+  align-items: flex-start;
+
+  @include for-device-1200 {
+    height: 711px;
+    @include flexBox(row);
+  }
 
   &__grey-header {
 
@@ -24,6 +30,14 @@ html, body {
       margin-top: 34px;
       text-align: center;
       width: 200px;
+      @include marginAuto;
+
+      @include for-device-768 {
+        @include fontSize($mainFont, $topTextColorAndButtonBg, 30px, 900);
+        margin-top: 54px;
+        width: 100%;
+      }
+
       @include for-device-1200 {
         display: none;
       }
@@ -32,33 +46,108 @@ html, body {
 
   &__lefter-on-laptop {
     @include flexBox(column);
+
+    @include for-device-768 {
+      width: 100vw;
+    }
+
+    @include for-device-1200 {
+      width: 50%;
+      margin-top: -127px;
+    }
   }
 
   &__righter-on-laptop {
 
+    @include for-device-1200 {
+      width: 50%;
+      margin-top: -47px;
+    }
   }
 }
 
 .lefter-on-laptop {
 
+  @include marginAuto;
+
   &__first-item {
     @include flexBox(column);
     margin-top: 34px;
+
+    @include for-device-768 {
+      @include flexBox(row);
+      margin-top: 60px;
+      margin-left: 30px;
+      justify-content: flex-start;
+      width: 96%;
+    }
+
+    @include for-device-1200 {
+      @include flexBox(row);
+      margin-top: 100px;
+      justify-content: flex-start;
+      margin-left: 90px;
+    }
   }
 
   &__second-item {
     @include flexBox(column);
     margin-top: 37px;
+
+    @include for-device-768 {
+      @include flexBox(row);
+      margin-top: 60px;
+      margin-left: 31px;
+      justify-content: flex-start;
+      width: 96%;
+    }
+
+    @include for-device-1200 {
+      @include flexBox(row);
+      margin-top: 34px;
+      justify-content: flex-start;
+      margin-left: 90px;
+    }
   }
 
   &__third-item {
     @include flexBox(column);
     margin-top: 37px;
+
+    @include for-device-768 {
+      @include flexBox(row);
+      margin-top: 56px;
+      margin-left: 46px;
+      justify-content: flex-start;
+      width: 94%;
+    }
+
+    @include for-device-1200 {
+      @include flexBox(row);
+      margin-top: 34px;
+      justify-content: flex-start;
+      margin-left: 90px;
+    }
   }
 
   &__fourth-item {
     @include flexBox(column)
     margin-top: 43px;
+
+    @include for-device-768 {
+      @include flexBox(row);
+      margin-top: 61px;
+      margin-left: 41px;
+      justify-content: flex-start;
+      width: 95%;
+    }
+
+    @include for-device-1200 {
+      @include flexBox(row);
+      margin-top: 34px;
+      justify-content: flex-start;
+      margin-left: 90px;
+    }
   }
 }
 
@@ -67,6 +156,24 @@ html, body {
   &__topic {
     margin-top: 29px;
     text-align: center;
+
+    @include for-device-768 {
+      margin-left: 24px;
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 0;
+      text-align: left;
+    }
+
+    @include for-device-1200 {
+      margin-left: 24px;
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 0;
+      text-align: left;
+    }
 
     &--header {
       @include fontSize($mainFont, #323232, 16px, 400);
@@ -77,6 +184,18 @@ html, body {
       margin-top: 20px;
       width: 266px;
       @include marginAuto;
+
+      @include for-device-768 {
+        width: 74%;
+        margin-left: 0;
+        margin-right: 37px;
+      }
+
+      @include for-device-1200 {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 }
@@ -87,6 +206,24 @@ html, body {
     margin-top: 23px;
     text-align: center;
 
+    @include for-device-768 {
+      margin-left: 43px;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    @include for-device-1200 {
+      margin-left: 44px;
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 0;
+      text-align: left;
+    }
+
     &--header {
       @include fontSize($mainFont, #323232, 16px, 400);
     }
@@ -96,6 +233,18 @@ html, body {
       margin-top: 15px;
       width: 266px;
       @include marginAuto;
+
+      @include for-device-768 {
+        width: 94%;
+        margin-left: 0;
+        margin-right: 37px;
+      }
+
+      @include for-device-1200 {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 }
@@ -106,6 +255,24 @@ html, body {
     margin-top: 22px;
     text-align: center;
 
+    @include for-device-768 {
+      margin-left: 58px;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    @include for-device-1200 {
+      margin-left: 72px;
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 0;
+      text-align: left;
+    }
+
     &--header {
       @include fontSize($mainFont, #323232, 16px, 400);
     }
@@ -115,6 +282,19 @@ html, body {
       margin-top: 17px;
       width: 266px;
       @include marginAuto;
+
+      @include for-device-768 {
+        width: 94%;
+        @include flexBox(row);
+        margin-left: 0;
+        margin-right: 37px;
+      }
+
+      @include for-device-1200 {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 }
@@ -125,6 +305,24 @@ html, body {
     margin-top: 25px;
     text-align: center;
 
+    @include for-device-768 {
+      margin-left: 52px;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    @include for-device-1200 {
+      margin-left: 60px;
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 0;
+      text-align: left;
+    }
+
     &--header {
       @include fontSize($mainFont, #323232, 16px, 400);
     }
@@ -134,25 +332,67 @@ html, body {
       margin-top: 16px;
       width: 266px;
       @include marginAuto;
+
+      @include for-device-768 {
+        width: 94%;
+        @include flexBox(row);
+        margin-left: 0;
+        margin-right: 37px;
+      }
+
+      @include for-device-1200 {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 }
 
 .righter-on-laptop {
 
+  @include for-device-1200 {
+    margin-left: 100px;
+  }
+
   &__righter-header {
 
     &--none-on-mobile {
       display: none;
+
+      @include for-device-1200 {
+        display: block;
+        @include fontSize($mainFont, $topTextColorAndButtonBg, 35px, 900);
+      }
     }
   }
 
   &__index-img {
     margin-top: 57px;
-    height: 381px;
+
+    @include for-device-768 {
+      display: none;
+    }
 
     &--diff-width {
-      width: 161%;
+      width: 100%;
+    }
+  }
+
+  &__index-img-desktop {
+    display: none;
+
+    @include for-device-768 {
+      display: block;
+      margin-top: 50px;
+      margin-left: 10px;
+    }
+
+    &--diff-width {
+
+      @include for-device-768 {
+        width: 103%;
+      }
     }
   }
 }
@@ -164,15 +404,45 @@ html, body {
   text-align: center;
   height: 2189px;
 
+  @include for-device-768 {
+    height: 1229px;
+
+
+  }
+
+  @include for-device-1200 {
+    height: 847px;
+  }
+
   &__last-header {
     @include fontSize ($mainFont, $mainColor, 21px, 900);
     @include marginAuto;
     width: 265px;
+
+    @include  for-device-768 {
+      @include fontSize ($mainFont, $mainColor, 31px, 900);
+      width: 465px;
+    }
+
+    @include  for-device-1200 {
+      @include fontSize ($mainFont, $mainColor, 35px, 900);
+      width: 665px;
+      padding-top: 73px;
+    }
   }
 
   &__footer {
     @include flexBox(column);
     margin-top: 53px;
+
+    @include for-device-768 {
+      margin-top: 47px;
+    }
+
+    @include for-device-1200 {
+      @include flexBox(row);
+      margin-top: 71px;
+    }
   }
 }
 
@@ -181,8 +451,32 @@ html, body {
   &__two-item {
     @include flexBox(column);
 
+    @include for-device-768 {
+      width: 555px;
+      @include flexBox(row);
+      justify-content: space-between;
+    }
+    @include for-device-1200 {
+      width: 527px;
+      @include flexBox(row);
+      justify-content: space-between;
+    }
+
     &--one-is-bigger {
       @include flexBox(column);
+
+      @include for-device-768 {
+        width: 563px;
+        @include flexBox(row);
+        justify-content: space-between;
+      }
+
+      @include for-device-1200 {
+        width: 563px;
+        @include flexBox(row);
+        justify-content: space-between;
+        margin-left: 14px;
+      }
     }
   }
 }
@@ -195,11 +489,19 @@ html, body {
     background-color: #5f5161;
     margin-bottom: 14px;
 
+    @include for-device-768 {
+      margin-bottom: 42px;
+    }
+
     &--bigger-one {
       height: 560px;
       width: 290px;
       background-color: #413344;
       margin-bottom: 14px;
+
+      @include for-device-768 {
+        width: 299px;
+      }
     }
   }
 }
@@ -262,6 +564,14 @@ html, body {
     @include fontSize($mainFont, $mainColor, 11px, 400);
     border: 0;
     border-radius: 135px 135px 135px 135px;
+  }
+
+  &__purchase-btn:hover {
+    @include for-device-1200 {
+      background-color: #d0cbd0;
+      color: #7f6d78;
+      cursor: pointer;
+    }
   }
 }
 
